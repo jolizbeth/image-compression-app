@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDF7F9;
+  --foreground: #c76a6a;
 }
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,9 +14,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #d87e9e;
   }
+}
+h1 {
+  font-size: 14px;
+  color: #d87e9e;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 body {
@@ -24,3 +31,48 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  gap: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  background-color: #FDF7F9; /* Light pink background */
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.footer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #D29BAC;
+}
+
+@media (min-width: 768px) { /* For medium screens and up */
+  .container {
+    padding: 20px;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FDF7F9; 
+}
+
